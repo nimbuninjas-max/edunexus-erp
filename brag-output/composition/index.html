@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>EduNexus ERP - Official Launch Video</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap');
+      * { margin:0; padding:0; box-sizing:border-box; }
+      html, body { margin:0; width:1920px; height:1080px; overflow:hidden; background:#050F0C;
+        font-family:'Plus Jakarta Sans',system-ui,sans-serif; color:#F5F0E6; user-select:none; }
+      .mono { font-family:'JetBrains Mono',monospace; }
+      #root { position:relative; width:1920px; height:1080px; overflow:hidden;
+        background:radial-gradient(ellipse 120% 80% at 50% 0%, #0D2A22 0%, #050F0C 70%); }
+      .clip { position:absolute; inset:0; width:1920px; height:1080px; display:flex;
+        flex-direction:column; justify-content:center; align-items:center; opacity:0; pointer-events:none; }
+      .glass { background:rgba(12,36,30,0.88); border:1px solid #1B4A40; border-radius:24px;
+        box-shadow:0 24px 48px rgba(0,0,0,0.55); }
+      .light-card { background:#FFFDF9; border:1px solid #DDD4C2; border-radius:24px;
+        box-shadow:0 24px 48px rgba(0,0,0,0.45); }
+      #top-nav { position:absolute; top:30px; left:70px; right:70px; height:68px;
+        background:#091A15; border:1px solid #1A473D; border-radius:20px; display:flex;
+        align-items:center; justify-content:space-between; padding:0 28px; z-index:200;
+        box-shadow:0 8px 28px rgba(0,0,0,0.45); }
+      .role-btn { padding:8px 22px; border-radius:10px; font-size:13px; font-weight:700; color:#6B9A90; }
+      .glow { position:absolute; border-radius:50%; filter:blur(130px); pointer-events:none; z-index:1; }
+      #subtitle-bar { position:absolute; bottom:0; left:0; right:0; height:104px;
+        background:linear-gradient(to top, rgba(3,8,6,0.98) 0%, rgba(3,8,6,0.0) 100%);
+        display:flex; align-items:center; justify-content:center; z-index:300; pointer-events:none; }
+      #subtitle-text { font-size:24px; font-weight:600; color:#FFFFFF; text-align:center;
+        max-width:1480px; line-height:1.42; letter-spacing:0.01em;
+        text-shadow:0 2px 16px rgba(0,0,0,0.9); opacity:0; }
+      #subtitle-text .hl  { color:#34D399; font-weight:800; }
+      #subtitle-text .hlb { color:#60A5FA; font-weight:800; }
+      #subtitle-text .hla { color:#FBBF24; font-weight:800; }
+      .cc-chip { display:inline-flex; align-items:center; gap:10px; padding:11px 22px;
+        border-radius:999px; font-size:15px; font-weight:700; opacity:0; }
+      .cc-g { background:#0A3D32; border:1.5px solid #10B981; color:#A7F3D0; }
+      .cc-b { background:#0A2540; border:1.5px solid #3B82F6; color:#BAE6FD; }
+      .cc-a { background:#2D1A00; border:1.5px solid #F59E0B; color:#FDE68A; }
+      .scene-lbl { display:inline-flex; align-items:center; gap:10px; padding:6px 18px;
+        border-radius:8px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:700;
+        text-transform:uppercase; letter-spacing:0.14em; background:#072018; border:1px solid #1B5446; color:#34D399; }
+      .step-pill { display:inline-flex; align-items:center; gap:10px; padding:10px 20px;
+        border-radius:999px; font-size:14px; font-weight:700; background:#071A14;
+        border:1.5px solid #1E5446; color:#94D4C4; opacity:0; }
+      .step-num { width:22px; height:22px; border-radius:50%; background:#10B981; color:#03100C;
+        font-size:12px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+      .pbw { width:100%; height:8px; background:#1C332B; border-radius:999px; overflow:hidden; margin-top:12px; }
+      .pb  { height:100%; border-radius:999px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="38" data-width="1920" data-height="1080">
+      <audio id="bgm" data-start="0" data-duration="38" src="./assets/music/bgm.mp3" preload="auto"></audio>
+      <div data-layout-allow-overflow class="glow" style="width:800px;height:800px;background:rgba(10,77,68,0.28);top:-200px;left:-200px;"></div>
+      <div data-layout-allow-overflow class="glow" style="width:700px;height:700px;background:rgba(14,107,94,0.18);bottom:-180px;right:-150px;"></div>
+
+      <!-- TOP NAV -->
+      <header id="top-nav">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:40px;height:40px;background:#0A4D44;border-radius:11px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:17px;color:#FFFDF9;border:1.5px solid #10B981;">EN</div>
+          <div>
+            <div style="font-weight:800;font-size:17px;letter-spacing:-0.02em;color:#F5F0E6;line-height:1;">EduNexus</div>
+            <div class="mono" style="font-size:10px;font-weight:700;color:#34D399;letter-spacing:0.14em;text-transform:uppercase;">School ERP Platform</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;background:#061512;border:1px solid #163C33;border-radius:13px;padding:4px;gap:4px;">
+          <div id="rb-s" class="role-btn">Student</div>
+          <div id="rb-t" class="role-btn">Teacher</div>
+          <div id="rb-a" class="role-btn">Admin Directorate</div>
+        </div>
+        <div class="mono" style="font-size:13px;font-weight:700;color:#34D399;background:#07271F;border:1px solid #115E4C;padding:7px 16px;border-radius:10px;">&#9679; LIVE - ALL SYSTEMS ACTIVE</div>
+      </header>
+
+      <div id="subtitle-bar"><div id="subtitle-text"></div></div>
+
+      <!-- SCENE 1: INTRO (0-6s) -->
+      <section id="sc1" class="clip" data-start="0" data-duration="6" data-track-index="0">
+        <div style="text-align:center;max-width:1500px;margin-top:26px;display:flex;flex-direction:column;align-items:center;gap:26px;">
+          <div id="s1b" style="display:inline-flex;align-items:center;gap:10px;padding:8px 24px;border-radius:999px;background:#072018;border:1.5px solid #10B981;font-size:14px;font-weight:700;color:#34D399;letter-spacing:0.1em;text-transform:uppercase;">
+            <span style="width:8px;height:8px;border-radius:50%;background:#34D399;"></span>Introducing &mdash; EduNexus School ERP 2026
+          </div>
+          <h1 id="s1h" style="font-size:90px;font-weight:900;line-height:1.0;letter-spacing:-0.045em;color:#FFFFFF;text-shadow:0 8px 40px rgba(0,0,0,0.7);">
+            ONE PLATFORM.<br><span style="color:#34D399;">EVERY STAKEHOLDER.</span>
+          </h1>
+          <p id="s1d" style="font-size:26px;font-weight:500;color:#C4DDD8;max-width:1100px;line-height:1.45;">
+            Attendance, academics, science labs, and staff payroll across<br>
+            <strong style="color:#FFFFFF;">6 wings</strong> &mdash; all from a single, unified dashboard.
+          </p>
+          <div id="s1c" style="display:flex;gap:20px;margin-top:6px;">
+            <div class="glass" style="padding:22px 28px;width:350px;display:flex;align-items:center;gap:18px;">
+              <div style="width:50px;height:50px;border-radius:14px;background:#0B4A3E;border:1.5px solid #10B981;display:flex;align-items:center;justify-content:center;font-size:26px;">&#127891;</div>
+              <div><div style="font-weight:800;font-size:17px;color:#FFFFFF;">Student Portal</div><div style="font-size:13px;color:#94D4C4;margin-top:3px;">Grades &middot; Attendance &middot; Virtual Lab</div></div>
+            </div>
+            <div class="glass" style="padding:22px 28px;width:350px;display:flex;align-items:center;gap:18px;">
+              <div style="width:50px;height:50px;border-radius:14px;background:#0A3248;border:1.5px solid #38BDF8;display:flex;align-items:center;justify-content:center;font-size:26px;">&#128203;</div>
+              <div><div style="font-weight:800;font-size:17px;color:#FFFFFF;">Teacher Portal</div><div style="font-size:13px;color:#7EC8E3;margin-top:3px;">Roll Call &middot; Gradebook &middot; Syllabus</div></div>
+            </div>
+            <div class="glass" style="padding:22px 28px;width:350px;display:flex;align-items:center;gap:18px;">
+              <div style="width:50px;height:50px;border-radius:14px;background:#2D1A00;border:1.5px solid #F59E0B;display:flex;align-items:center;justify-content:center;font-size:26px;">&#127963;&#65039;</div>
+              <div><div style="font-weight:800;font-size:17px;color:#FFFFFF;">Admin Directorate</div><div style="font-size:13px;color:#FBD38D;margin-top:3px;">HR &middot; Payroll &middot; Treasury &middot; Staff</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 2: TEACHER ROLL CALL (6-14.5s) -->
+      <section id="sc2" class="clip" data-start="6" data-duration="8.5" data-track-index="0">
+        <div style="width:1720px;margin-top:36px;display:flex;flex-direction:column;gap:14px;">
+          <div id="s2hd" style="display:flex;align-items:center;gap:16px;">
+            <div class="scene-lbl"><span style="width:8px;height:8px;border-radius:50%;background:#34D399;"></span>Feature 1 of 4 &mdash; Teacher Portal</div>
+            <h2 style="font-size:34px;font-weight:900;color:#FFFFFF;letter-spacing:-0.025em;">One-Tap Roll Call &amp; Live Syllabus Broadcast</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:870px 810px;gap:28px;align-items:start;">
+            <div id="s2att" class="light-card" style="padding:32px;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;border-bottom:2px solid #EAE2D3;padding-bottom:14px;">
+                <div>
+                  <span class="mono" style="font-size:11px;font-weight:700;text-transform:uppercase;color:#0A4D44;letter-spacing:0.1em;background:#EFF5F3;padding:4px 12px;border-radius:6px;">Period 3 &bull; Room 302</span>
+                  <h3 style="font-size:24px;font-weight:800;color:#1C2A27;margin-top:8px;">Section 10-A &mdash; Physics</h3>
+                  <p style="font-size:13px;color:#2D2820;margin-top:2px;">Faculty: <strong>Dr. K. Raman</strong> (Reg #100012)</p>
+                </div>
+                <div style="padding:8px 16px;border-radius:11px;font-weight:800;font-size:12px;background:#EFF5F3;color:#07453C;border:1px solid #9CC5BE;display:flex;align-items:center;gap:8px;">
+                  <span style="width:8px;height:8px;border-radius:50%;background:#10B981;"></span>Teaching Live
+                </div>
+              </div>
+              <div style="background:#F7F3EB;border:1px solid #DDD4C2;border-radius:12px;padding:14px;margin-bottom:16px;">
+                <div class="mono" style="font-size:11px;font-weight:700;color:#6E440C;text-transform:uppercase;margin-bottom:4px;">Live Syllabus Broadcast &mdash; auto-synced to all students</div>
+                <div class="mono" style="font-size:15px;font-weight:700;color:#07453C;">&ldquo;Electromagnetic Induction &amp; Faraday&rsquo;s Law&rdquo;</div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;">
+                <div style="text-align:center;padding:8px;background:#F0FDF4;border-radius:10px;font-size:12px;font-weight:700;color:#166534;border:1px solid #BBF7D0;">&#10003; Aarav S.<br><span style="font-weight:700;color:#0D5C2A;font-size:11px;">#1024</span></div>
+                <div style="text-align:center;padding:8px;background:#F0FDF4;border-radius:10px;font-size:12px;font-weight:700;color:#166534;border:1px solid #BBF7D0;">&#10003; Priya M.<br><span style="font-weight:700;color:#0D5C2A;font-size:11px;">#1025</span></div>
+                <div style="text-align:center;padding:8px;background:#F0FDF4;border-radius:10px;font-size:12px;font-weight:700;color:#166534;border:1px solid #BBF7D0;">&#10003; Rohan K.<br><span style="font-weight:700;color:#0D5C2A;font-size:11px;">#1026</span></div>
+                <div style="text-align:center;padding:8px;background:#FFF7ED;border-radius:10px;font-size:12px;font-weight:700;color:#92400E;border:1px solid #FED7AA;">&#9888; Meena J.<br><span style="font-weight:700;color:#92400E;font-size:11px;">Late Entry</span></div>
+                <div style="text-align:center;padding:8px;background:#F0FDF4;border-radius:10px;font-size:12px;font-weight:700;color:#166534;border:1px solid #BBF7D0;">&#10003; Dev P.<br><span style="font-weight:700;color:#0D5C2A;font-size:11px;">#1028</span></div>
+                <div style="text-align:center;padding:8px;background:#F0FDF4;border-radius:10px;font-size:12px;font-weight:700;color:#166534;border:1px solid #BBF7D0;">&#10003; Anita R.<br><span style="font-weight:700;color:#0D5C2A;font-size:11px;">#1029</span></div>
+                <div style="text-align:center;padding:8px;background:#F0FDF4;border-radius:10px;font-size:12px;font-weight:700;color:#166534;border:1px solid #BBF7D0;">&#10003; Karan T.<br><span style="font-weight:700;color:#0D5C2A;font-size:11px;">#1030</span></div>
+                <div style="text-align:center;padding:8px;background:#F0FDF4;border-radius:10px;font-size:12px;font-weight:700;color:#166534;border:1px solid #BBF7D0;">&#10003; Sneha B.<br><span style="font-weight:700;color:#0D5C2A;font-size:11px;">#1031</span></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;background:#F5F0E6;padding:13px 18px;border-radius:12px;">
+                <div>
+                  <div style="font-size:15px;font-weight:800;color:#1C2A27;">Roll Call: 31 / 32 Students &#10003;</div>
+                  <div style="font-size:12px;color:#07453C;font-weight:600;margin-top:2px;">1 Late entry &mdash; biometric pending</div>
+                </div>
+                <div id="s2btn" style="background:#0A4D44;color:white;font-weight:700;font-size:14px;padding:11px 20px;border-radius:11px;box-shadow:0 4px 14px rgba(10,77,68,0.4);display:flex;align-items:center;gap:8px;">
+                  &#10003; Mark Section Present
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:18px;padding-top:6px;">
+              <div class="glass" style="padding:28px;">
+                <div class="mono" style="font-size:11px;font-weight:700;color:#34D399;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">How it works</div>
+                <div style="display:flex;flex-direction:column;gap:12px;">
+                  <div id="s2p1" class="step-pill"><div class="step-num">1</div>Teacher opens their section dashboard</div>
+                  <div id="s2p2" class="step-pill"><div class="step-num">2</div>Syllabus topic broadcasts to all students</div>
+                  <div id="s2p3" class="step-pill"><div class="step-num">3</div>One tap marks all 32 students present</div>
+                  <div id="s2p4" class="step-pill"><div class="step-num">4</div>Attendance syncs instantly to Admin</div>
+                </div>
+              </div>
+              <div id="s2chip" class="cc-chip cc-g" style="font-size:16px;padding:13px 22px;">
+                <span style="width:10px;height:10px;border-radius:50%;background:#10B981;"></span>
+                Saves teachers <strong style="color:#FFFFFF;margin-left:4px;">10 minutes per class</strong> every day
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+                <div id="s2st1" class="glass" style="padding:18px 20px;opacity:0;">
+                  <div class="mono" style="font-size:11px;color:#34D399;font-weight:700;text-transform:uppercase;">Sections Live</div>
+                  <div class="mono" style="font-size:34px;font-weight:900;color:#FFFFFF;margin-top:4px;">6</div>
+                  <div style="font-size:12px;color:#94D4C4;">All synced in real time</div>
+                </div>
+                <div id="s2st2" class="glass" style="padding:18px 20px;opacity:0;">
+                  <div class="mono" style="font-size:11px;color:#34D399;font-weight:700;text-transform:uppercase;">Total Students</div>
+                  <div class="mono" style="font-size:34px;font-weight:900;color:#FFFFFF;margin-top:4px;">142</div>
+                  <div style="font-size:12px;color:#94D4C4;">Across entire campus</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 3: CBCS GRADEBOOK (14.5-21.5s) -->
+      <section id="sc3" class="clip" data-start="14.5" data-duration="7" data-track-index="0">
+        <div style="width:1720px;margin-top:36px;display:flex;flex-direction:column;gap:14px;">
+          <div id="s3hd" style="display:flex;align-items:center;gap:16px;">
+            <div class="scene-lbl" style="border-color:#3B82F6;color:#60A5FA;"><span style="width:8px;height:8px;border-radius:50%;background:#60A5FA;"></span>Feature 2 of 4 &mdash; Student Portal</div>
+            <h2 style="font-size:34px;font-weight:900;color:#FFFFFF;letter-spacing:-0.025em;">CBCS Gradebook &mdash; Real-Time Academic Progress</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:920px 760px;gap:28px;align-items:start;">
+            <div id="s3gc" class="glass" style="padding:32px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;border-bottom:1px solid #1E5045;padding-bottom:16px;">
+                <div>
+                  <div class="mono" style="font-size:11px;font-weight:700;color:#60A5FA;text-transform:uppercase;letter-spacing:0.1em;">CBCS &mdash; Choice Based Credit System</div>
+                  <h3 style="font-size:24px;font-weight:800;color:#FFFFFF;margin-top:6px;">Aarav Sharma &mdash; Roll #1024</h3>
+                  <div style="font-size:13px;color:#94D4C4;margin-top:2px;">Class 10-A &middot; Academic Year 2025&ndash;26</div>
+                </div>
+                <div class="mono" style="background:#0A4D44;color:#34D399;font-weight:900;font-size:18px;padding:10px 20px;border-radius:12px;border:1.5px solid #10B981;">Rank #1</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:13px;">
+                <div style="background:#071D18;padding:15px 18px;border-radius:13px;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;"><span style="font-weight:700;color:#FFFFFF;font-size:15px;">Physics (Theory &amp; Practicals)</span><span class="mono" style="font-weight:900;color:#34D399;font-size:15px;">96 / 100</span></div>
+                  <div class="pbw"><div style="width:96%;background:#10B981;" class="pb"></div></div>
+                </div>
+                <div style="background:#071D18;padding:15px 18px;border-radius:13px;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;"><span style="font-weight:700;color:#FFFFFF;font-size:15px;">Mathematics (Calculus &amp; Vectors)</span><span class="mono" style="font-weight:900;color:#34D399;font-size:15px;">98 / 100</span></div>
+                  <div class="pbw"><div style="width:98%;background:#10B981;" class="pb"></div></div>
+                </div>
+                <div style="background:#071D18;padding:15px 18px;border-radius:13px;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;"><span style="font-weight:700;color:#FFFFFF;font-size:15px;">Chemistry (Inorganic &amp; Physical)</span><span class="mono" style="font-weight:900;color:#34D399;font-size:15px;">94 / 100</span></div>
+                  <div class="pbw"><div style="width:94%;background:#10B981;" class="pb"></div></div>
+                </div>
+                <div style="background:#071D18;padding:15px 18px;border-radius:13px;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;"><span style="font-weight:700;color:#FFFFFF;font-size:15px;">English Literature &amp; Composition</span><span class="mono" style="font-weight:900;color:#60A5FA;font-size:15px;">90 / 100</span></div>
+                  <div class="pbw"><div style="width:90%;background:#3B82F6;" class="pb"></div></div>
+                </div>
+              </div>
+              <div style="margin-top:18px;padding-top:14px;border-top:1px solid #1E5045;display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:14px;font-weight:700;color:#CBD5E1;text-transform:uppercase;letter-spacing:0.05em;">Aggregate Score</span>
+                <div class="mono" style="font-size:30px;font-weight:900;color:#34D399;">468 / 500 <span style="font-size:18px;color:#FFFFFF;">(93.6%)</span></div>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:20px;padding-top:4px;">
+              <div class="glass" style="padding:28px;">
+                <div class="mono" style="font-size:11px;font-weight:700;color:#60A5FA;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px;">What CBCS Gradebook does</div>
+                <div style="display:flex;flex-direction:column;gap:14px;">
+                  <div id="s3f1" style="display:flex;align-items:flex-start;gap:13px;opacity:0;">
+                    <div style="width:36px;height:36px;background:#0A3248;border:1.5px solid #3B82F6;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">&#128202;</div>
+                    <div><div style="font-weight:700;color:#FFFFFF;font-size:14px;">Auto-calculated CBCS credits &amp; grades</div><div style="font-size:12px;color:#94A3B8;margin-top:3px;">Grade points computed instantly on each submission</div></div>
+                  </div>
+                  <div id="s3f2" style="display:flex;align-items:flex-start;gap:13px;opacity:0;">
+                    <div style="width:36px;height:36px;background:#0A3248;border:1.5px solid #3B82F6;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">&#128200;</div>
+                    <div><div style="font-weight:700;color:#FFFFFF;font-size:14px;">Live class rank &amp; percentile tracker</div><div style="font-size:12px;color:#94A3B8;margin-top:3px;">Students see rankings update in real time</div></div>
+                  </div>
+                  <div id="s3f3" style="display:flex;align-items:flex-start;gap:13px;opacity:0;">
+                    <div style="width:36px;height:36px;background:#0A3248;border:1.5px solid #3B82F6;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">&#128196;</div>
+                    <div><div style="font-weight:700;color:#FFFFFF;font-size:14px;">One-click printable report cards</div><div style="font-size:12px;color:#94A3B8;margin-top:3px;">PDF export with official school letterhead</div></div>
+                  </div>
+                </div>
+              </div>
+              <div id="s3chip" class="cc-chip cc-b" style="font-size:15px;padding:13px 22px;">
+                <span style="width:10px;height:10px;border-radius:50%;background:#3B82F6;"></span>
+                No manual grade sheets &mdash; <strong style="color:#FFFFFF;margin-left:4px;">100% digital, zero errors</strong>
+              </div>
+              <div id="s3gpa" class="glass" style="padding:22px 26px;display:flex;align-items:center;gap:20px;opacity:0;">
+                <div style="text-align:center;flex-shrink:0;">
+                  <div class="mono" style="font-size:46px;font-weight:900;color:#34D399;">9.4</div>
+                  <div style="font-size:12px;color:#94D4C4;font-weight:600;">CGPA</div>
+                </div>
+                <div style="width:1px;height:56px;background:#1E5045;"></div>
+                <div><div style="font-weight:700;color:#FFFFFF;font-size:15px;">Outstanding Performance</div><div style="font-size:13px;color:#94D4C4;margin-top:4px;">Eligible for Merit Scholarship &amp; Top-College Recommendation</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 4: 3D CHEMISTRY LAB (21.5-28.5s) -->
+      <section id="sc4" class="clip" data-start="21.5" data-duration="7" data-track-index="0">
+        <div style="width:1720px;margin-top:36px;display:flex;flex-direction:column;gap:14px;">
+          <div id="s4hd" style="display:flex;align-items:center;gap:16px;">
+            <div class="scene-lbl" style="border-color:#38BDF8;color:#38BDF8;"><span style="width:8px;height:8px;border-radius:50%;background:#38BDF8;"></span>Feature 3 of 4 &mdash; Virtual Science Lab</div>
+            <h2 style="font-size:34px;font-weight:900;color:#FFFFFF;letter-spacing:-0.025em;">3D Chemistry Simulation &mdash; No Physical Chemicals Needed</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:820px 860px;gap:28px;align-items:start;">
+            <div id="s4fc" class="glass" style="padding:32px;position:relative;overflow:hidden;height:508px;display:flex;flex-direction:column;justify-content:space-between;">
+              <div>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                  <span class="mono" style="font-size:12px;font-weight:700;color:#38BDF8;text-transform:uppercase;letter-spacing:0.1em;">EduNexus 3D Virtual Lab</span>
+                  <span style="background:#0A3D32;border:1.5px solid #10B981;color:#A7F3D0;padding:4px 14px;border-radius:999px;font-size:12px;font-weight:700;">&#9679; Simulation Active</span>
+                </div>
+                <h3 style="font-size:26px;font-weight:800;color:#FFFFFF;">Precipitate Synthesis</h3>
+                <div class="mono" style="font-size:15px;font-weight:700;color:#60A5FA;margin-top:8px;background:rgba(59,130,246,0.1);padding:10px 14px;border-radius:10px;border:1px solid rgba(59,130,246,0.25);">
+                  CuSO&#8324; (aq) + 2NaOH (aq) &rarr; Cu(OH)&#8322;&#8595; + Na&#8322;SO&#8324;
+                </div>
+              </div>
+              <div style="position:relative;width:280px;height:220px;margin:0 auto;border:4px solid rgba(255,255,255,0.3);border-top:none;border-radius:0 0 34px 34px;background:rgba(255,255,255,0.03);overflow:hidden;box-shadow:inset 0 0 30px rgba(56,189,248,0.12);">
+                <div id="s4liq" style="position:absolute;bottom:0;left:0;right:0;height:130px;background:linear-gradient(180deg,#1D4ED8 0%,#1E3A8A 100%);opacity:0.82;">
+                  <div id="s4pre" style="position:absolute;bottom:0;left:0;right:0;height:0;background:#3B82F6;opacity:0;border-top:3px solid #93C5FD;"></div>
+                </div>
+                <div class="mono" style="position:absolute;right:8px;top:28px;font-size:10px;color:rgba(255,255,255,0.6);text-align:right;line-height:2.4;">300 mL &mdash;<br>200 mL &mdash;<br>100 mL &mdash;</div>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;background:#061713;border:1px solid #143D33;padding:11px 16px;border-radius:12px;">
+                <span style="font-size:13px;color:#34D399;font-weight:700;">&#10003; Exothermic equilibrium reached</span>
+                <span class="mono" style="font-size:12px;color:#CBD5E1;">Safety: Class A &mdash; Zero Hazard</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+                <div id="s4tc" class="glass" style="padding:22px;opacity:0;">
+                  <div class="mono" style="font-size:11px;font-weight:700;color:#F87171;text-transform:uppercase;">Calorimeter</div>
+                  <div class="mono" id="s4tv" style="font-size:40px;font-weight:900;color:#FFFFFF;margin:6px 0;">25.0&deg;C</div>
+                  <div style="font-size:12px;color:#FCA5A5;">&Delta;H = &minus;42.8 kJ/mol</div>
+                  <div class="pbw"><div id="s4tb" style="width:25%;background:#EF4444;" class="pb"></div></div>
+                </div>
+                <div id="s4pc" class="glass" style="padding:22px;opacity:0;">
+                  <div class="mono" style="font-size:11px;font-weight:700;color:#38BDF8;text-transform:uppercase;">pH Sensor</div>
+                  <div class="mono" id="s4pv" style="font-size:40px;font-weight:900;color:#FFFFFF;margin:6px 0;">7.00</div>
+                  <div style="font-size:12px;color:#BAE6FD;">Alkaline (Strong Base)</div>
+                  <div class="pbw"><div id="s4pb" style="width:50%;background:#3B82F6;" class="pb"></div></div>
+                </div>
+              </div>
+              <div id="s4why" class="glass" style="padding:26px;opacity:0;">
+                <div class="mono" style="font-size:11px;font-weight:700;color:#38BDF8;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">Why Virtual Labs Matter</div>
+                <div style="display:flex;flex-direction:column;gap:12px;">
+                  <div style="display:flex;align-items:flex-start;gap:12px;"><span style="font-size:18px;flex-shrink:0;">&#129514;</span><div style="font-size:14px;color:#E2E8F0;"><strong style="color:#FFFFFF;">No chemicals, no accidents</strong> &mdash; Students run 3D simulations safely from any device</div></div>
+                  <div style="display:flex;align-items:flex-start;gap:12px;"><span style="font-size:18px;flex-shrink:0;">&#128225;</span><div style="font-size:14px;color:#E2E8F0;"><strong style="color:#FFFFFF;">Real-time sensor data</strong> &mdash; Temperature, pH and kinetics auto-logged to student dossier</div></div>
+                  <div style="display:flex;align-items:flex-start;gap:12px;"><span style="font-size:18px;flex-shrink:0;">&#8734;</span><div style="font-size:14px;color:#E2E8F0;"><strong style="color:#FFFFFF;">Unlimited experiments</strong> &mdash; Run any reaction without lab time or chemical costs</div></div>
+                </div>
+              </div>
+              <div id="s4chip" class="cc-chip cc-b" style="font-size:15px;padding:13px 22px;">
+                <span style="width:10px;height:10px;border-radius:50%;background:#38BDF8;"></span>
+                Full experiment auto-logged &amp; graded &mdash; <strong style="color:#FFFFFF;margin-left:4px;">instantly</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 5: PAYROLL & TREASURY (28.5-35.5s) -->
+      <section id="sc5" class="clip" data-start="28.5" data-duration="7" data-track-index="0">
+        <div style="width:1720px;margin-top:36px;display:flex;flex-direction:column;gap:14px;">
+          <div id="s5hd" style="display:flex;align-items:center;gap:16px;">
+            <div class="scene-lbl" style="border-color:#F59E0B;color:#FBBF24;"><span style="width:8px;height:8px;border-radius:50%;background:#FBBF24;"></span>Feature 4 of 4 &mdash; Admin Directorate</div>
+            <h2 style="font-size:34px;font-weight:900;color:#FFFFFF;letter-spacing:-0.025em;">Staff HR &amp; Treasury Payroll &mdash; One-Click Disbursement</h2>
+          </div>
+          <div style="display:grid;grid-template-columns:940px 740px;gap:28px;align-items:start;">
+            <div id="s5tc" class="light-card" style="padding:30px;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px;border-bottom:2px solid #EAE2D3;padding-bottom:14px;">
+                <div>
+                  <span class="mono" style="font-size:11px;font-weight:700;color:#07453C;text-transform:uppercase;background:#EFF5F3;padding:4px 10px;border-radius:6px;">October 2026 &mdash; Payroll Active</span>
+                  <h3 style="font-size:22px;font-weight:800;color:#1C2A27;margin-top:8px;">Campus Staff Master Register</h3>
+                  <p style="font-size:12px;color:#2D2820;margin-top:2px;">6 Wings: Teaching &middot; Sanitation &middot; Power Grid &middot; Plumbing &middot; Security &middot; IT</p>
+                </div>
+                <div id="s5dbtn" style="background:#0A4D44;color:white;font-weight:800;font-size:13px;padding:11px 18px;border-radius:11px;box-shadow:0 4px 14px rgba(10,77,68,0.4);display:flex;align-items:center;gap:8px;cursor:pointer;white-space:nowrap;">
+                  &#128176; Bulk Disburse &mdash; &#8377;14.4 L
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:9px;">
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 14px;background:#F7F3EB;border-radius:10px;font-size:13px;">
+                  <div><strong style="color:#1C2A27;">Dr. K. Raman</strong><span class="mono" style="color:#07453C;margin-left:8px;font-size:12px;">#100012 &bull; Teaching Faculty</span></div>
+                  <div style="display:flex;align-items:center;gap:12px;"><span class="mono" style="font-weight:800;color:#0A3630;font-size:14px;">&#8377;78,400</span><span id="s5s1" class="mono" style="font-size:11px;font-weight:700;background:#EFF5F3;color:#07453C;padding:4px 10px;border-radius:6px;border:1px solid #9CC5BE;">Pending&hellip;</span></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 14px;background:#F7F3EB;border-radius:10px;font-size:13px;">
+                  <div><strong style="color:#1C2A27;">Smt. Lakshmi Bai</strong><span class="mono" style="color:#07453C;margin-left:8px;font-size:12px;">#200004 &bull; Hygiene &amp; Sanitation</span></div>
+                  <div style="display:flex;align-items:center;gap:12px;"><span class="mono" style="font-weight:800;color:#0A3630;font-size:14px;">&#8377;24,500</span><span id="s5s2" class="mono" style="font-size:11px;font-weight:700;background:#EFF5F3;color:#07453C;padding:4px 10px;border-radius:6px;border:1px solid #9CC5BE;">Pending&hellip;</span></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 14px;background:#F7F3EB;border-radius:10px;font-size:13px;">
+                  <div><strong style="color:#1C2A27;">Shri Vikram Singh</strong><span class="mono" style="color:#07453C;margin-left:8px;font-size:12px;">#300008 &bull; Power &amp; HT/LT Grid</span></div>
+                  <div style="display:flex;align-items:center;gap:12px;"><span class="mono" style="font-weight:800;color:#0A3630;font-size:14px;">&#8377;32,000</span><span id="s5s3" class="mono" style="font-size:11px;font-weight:700;background:#EFF5F3;color:#07453C;padding:4px 10px;border-radius:6px;border:1px solid #9CC5BE;">Pending&hellip;</span></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:11px 14px;background:#F7F3EB;border-radius:10px;font-size:13px;">
+                  <div><strong style="color:#1C2A27;">Shri Arjun Mehta</strong><span class="mono" style="color:#07453C;margin-left:8px;font-size:12px;">#400012 &bull; Campus Security</span></div>
+                  <div style="display:flex;align-items:center;gap:12px;"><span class="mono" style="font-weight:800;color:#0A3630;font-size:14px;">&#8377;21,000</span><span id="s5s4" class="mono" style="font-size:11px;font-weight:700;background:#EFF5F3;color:#07453C;padding:4px 10px;border-radius:6px;border:1px solid #9CC5BE;">Pending&hellip;</span></div>
+                </div>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:14px;border-top:2px solid #EAE2D3;">
+                <span style="font-weight:700;color:#2D2820;font-size:13px;">Total Remittance &mdash; 36 Staff</span>
+                <div class="mono" style="font-size:22px;font-weight:900;color:#0A3630;">&#8377;14,40,000</div>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <div id="s5vc" class="light-card" style="padding:26px;border:2px dashed #9CC5BE;position:relative;opacity:0;">
+                <div id="s5stmp" data-layout-allow-overlap style="position:absolute;right:20px;top:16px;width:84px;height:84px;border:4px solid #07453C;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-12deg);color:#07453C;font-weight:900;font-size:9px;text-transform:uppercase;text-align:center;opacity:0;">
+                  <span>TREASURY</span><span style="font-size:12px;">PAID</span><span>OCT 2026</span>
+                </div>
+                <div style="border-bottom:2px solid #EAE2D3;padding-bottom:11px;margin-bottom:13px;padding-right:78px;">
+                  <span class="mono" style="font-size:10px;font-weight:800;color:#07453C;text-transform:uppercase;">Official Pay Slip</span>
+                  <h4 style="font-size:17px;font-weight:900;color:#1C2A27;margin-top:4px;">EDUNEXUS VIDYA MANDIR</h4>
+                  <p style="font-size:11px;color:#2D2820;">Ref: EN-PR-2026-10-100012 &middot; Bank: HDFC &middot;&middot;&middot;&middot; 4012</p>
+                </div>
+                <div style="font-size:13px;color:#2D2820;display:flex;flex-direction:column;gap:7px;">
+                  <div style="display:flex;justify-content:space-between;"><span>Basic Pay (7th Pay Comm)</span><strong class="mono" style="color:#1C2A27;">&#8377;54,000</strong></div>
+                  <div style="display:flex;justify-content:space-between;"><span>DA (45%) + HRA (40%)</span><strong class="mono" style="color:#07453C;">&#8377;31,400</strong></div>
+                  <div style="display:flex;justify-content:space-between;border-bottom:1px solid #EAE2D3;padding-bottom:7px;"><span>EPF &amp; Tax Deductions</span><strong class="mono" style="color:#9B1C1C;">&minus;&#8377;7,000</strong></div>
+                  <div style="display:flex;justify-content:space-between;font-size:16px;font-weight:900;color:#0A3630;padding-top:4px;"><span>Net Disbursed</span><span class="mono">&#8377;78,400</span></div>
+                </div>
+              </div>
+              <div id="s5why" class="glass" style="padding:24px;opacity:0;">
+                <div class="mono" style="font-size:11px;font-weight:700;color:#FBBF24;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:11px;">What this replaces</div>
+                <div style="display:flex;flex-direction:column;gap:10px;">
+                  <div style="display:flex;align-items:center;gap:11px;"><span style="font-size:16px;">&#127970;</span><div style="font-size:13px;color:#E2E8F0;"><strong style="color:#FFFFFF;">Manual bank transfers</strong> &rarr; automated bulk disbursement in 1 click</div></div>
+                  <div style="display:flex;align-items:center;gap:11px;"><span style="font-size:16px;">&#128209;</span><div style="font-size:13px;color:#E2E8F0;"><strong style="color:#FFFFFF;">Paper salary registers</strong> &rarr; digital master register with full audit trail</div></div>
+                  <div style="display:flex;align-items:center;gap:11px;"><span style="font-size:16px;">&#129518;</span><div style="font-size:13px;color:#E2E8F0;"><strong style="color:#FFFFFF;">Manual EPF/tax calc</strong> &rarr; auto-computed with 7th Pay Commission rules</div></div>
+                </div>
+              </div>
+              <div id="s5chip" class="cc-chip cc-a" style="font-size:15px;padding:13px 22px;">
+                <span style="width:10px;height:10px;border-radius:50%;background:#F59E0B;"></span>
+                &#8377;14.4 Lakh to 36 staff &mdash; <strong style="color:#FFFFFF;margin-left:4px;">in seconds, not days</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCENE 6: OUTRO (35.5-38s) -->
+      <section id="sc6" class="clip" data-start="35.5" data-duration="2.5" data-track-index="0">
+        <div style="text-align:center;max-width:1300px;display:flex;flex-direction:column;align-items:center;gap:28px;">
+          <h2 id="s6hed" style="font-size:74px;font-weight:900;letter-spacing:-0.04em;color:#FFFFFF;line-height:1.08;">
+            Everything a school needs.<br><span style="color:#34D399;">All in one platform.</span>
+          </h2>
+          <div id="s6pills" style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
+            <span style="background:#0A3D32;border:1.5px solid #10B981;color:#A7F3D0;padding:9px 20px;border-radius:999px;font-size:14px;font-weight:700;">&#10003; Roll Call &amp; Attendance</span>
+            <span style="background:#0A2540;border:1.5px solid #3B82F6;color:#BAE6FD;padding:9px 20px;border-radius:999px;font-size:14px;font-weight:700;">&#10003; CBCS Gradebook</span>
+            <span style="background:#0B3040;border:1.5px solid #38BDF8;color:#BAE6FD;padding:9px 20px;border-radius:999px;font-size:14px;font-weight:700;">&#10003; 3D Virtual Science Lab</span>
+            <span style="background:#2D1A00;border:1.5px solid #F59E0B;color:#FDE68A;padding:9px 20px;border-radius:999px;font-size:14px;font-weight:700;">&#10003; Staff HR &amp; Payroll</span>
+            <span style="background:#1A0A2E;border:1.5px solid #A78BFA;color:#DDD6FE;padding:9px 20px;border-radius:999px;font-size:14px;font-weight:700;">&#10003; Multi-Role Portals</span>
+          </div>
+          <div id="s6lock" style="display:inline-flex;align-items:center;gap:20px;background:#0A261F;border:2px solid #165C4F;padding:18px 44px;border-radius:28px;box-shadow:0 24px 56px rgba(0,0,0,0.65);">
+            <div style="width:54px;height:54px;background:#0A4D44;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:26px;color:#FFFDF9;border:2px solid #34D399;">EN</div>
+            <div style="text-align:left;">
+              <div style="font-size:30px;font-weight:900;color:#FFFFFF;line-height:1.1;">EduNexus ERP 2026</div>
+              <div class="mono" style="font-size:13px;font-weight:700;color:#34D399;letter-spacing:0.12em;text-transform:uppercase;">Complete Institutional Operating System</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      function sub(html, inAt, outAt) {
+        tl.call(() => { document.getElementById('subtitle-text').innerHTML = html; }, [], inAt);
+        tl.to('#subtitle-text', { opacity:1, duration:0.38, ease:'power2.out' }, inAt);
+        tl.to('#subtitle-text', { opacity:0, duration:0.3, ease:'power2.in' }, outAt - 0.3);
+      }
+      function rOn(id, at)  { tl.set(id, { background:'#0A4D44', color:'#FFFFFF' }, at); }
+      function rOff(id, at) { tl.set(id, { background:'transparent', color:'#6B9A90' }, at); }
+
+      // SCENE 1 : Intro (0 - 6s)
+      tl.set('#sc1', { opacity:1, pointerEvents:'auto' }, 0);
+      tl.fromTo('#s1b', {opacity:0,y:-20},{opacity:1,y:0,duration:0.5,ease:'power2.out'}, 0.2);
+      tl.fromTo('#s1h', {opacity:0,y:44},{opacity:1,y:0,duration:0.7,ease:'power3.out'}, 0.4);
+      tl.fromTo('#s1d', {opacity:0,y:24},{opacity:1,y:0,duration:0.6,ease:'power2.out'}, 0.75);
+      tl.fromTo('#s1c > div',{opacity:0,y:44,scale:0.95},{opacity:1,y:0,scale:1,duration:0.55,stagger:0.15,ease:'back.out(1.4)'}, 1.2);
+      rOn('#rb-s',0.5); rOff('#rb-s',2.0);
+      rOn('#rb-t',2.0); rOff('#rb-t',3.5);
+      rOn('#rb-a',3.5); rOff('#rb-a',6.0);
+      sub('EduNexus is a complete school management platform &mdash; one login for <span class="hl">students</span>, <span class="hl">teachers</span>, and <span class="hl">administrators</span>.', 1.6, 5.6);
+      tl.to('#sc1', {opacity:0,scale:0.97,duration:0.4,ease:'power2.in'}, 5.6);
+
+      // SCENE 2 : Roll Call (6 - 14.5s)
+      tl.set('#sc2', {opacity:1,pointerEvents:'auto'}, 6.0);
+      rOn('#rb-t',6.0); rOff('#rb-t',14.5);
+      tl.fromTo('#s2hd',{opacity:0,y:-18},{opacity:1,y:0,duration:0.42,ease:'power2.out'}, 6.1);
+      tl.fromTo('#s2att',{opacity:0,x:-65},{opacity:1,x:0,duration:0.6,ease:'power3.out'}, 6.2);
+      tl.fromTo('#sc2 .glass',{opacity:0,x:65},{opacity:1,x:0,duration:0.6,ease:'power3.out'}, 6.35);
+      tl.to('#s2p1',{opacity:1,duration:0.3},6.7);
+      tl.set('#s2p1',{background:'#0A4D44',borderColor:'#10B981',color:'#FFFFFF'},6.7);
+      tl.to('#s2p2',{opacity:1,duration:0.3},7.8);
+      tl.set('#s2p2',{background:'#0A4D44',borderColor:'#10B981',color:'#FFFFFF'},7.8);
+      tl.to('#s2p3',{opacity:1,duration:0.3},9.2);
+      tl.set('#s2p3',{background:'#0A4D44',borderColor:'#10B981',color:'#FFFFFF'},9.2);
+      tl.to('#s2p4',{opacity:1,duration:0.3},10.5);
+      tl.set('#s2p4',{background:'#0A4D44',borderColor:'#10B981',color:'#FFFFFF'},10.5);
+      tl.fromTo('#s2btn',{scale:1},{scale:0.92,duration:0.12,yoyo:true,repeat:1},9.8);
+      tl.to('#s2btn',{background:'#065F46',duration:0.2},9.95);
+      tl.to('#s2chip',{opacity:1,duration:0.4,ease:'back.out(1.5)'},10.8);
+      tl.to('#s2st1',{opacity:1,duration:0.3},11.2);
+      tl.to('#s2st2',{opacity:1,duration:0.3},11.5);
+      sub('The <span class="hl">Teacher Portal</span> lets any faculty member open their class and mark attendance for all 32 students &mdash; with a single tap.', 6.5, 9.5);
+      sub('The syllabus <span class="hl">topic broadcast</span> keeps every student feed updated automatically &mdash; no email or manual announcement needed.', 9.6, 14.0);
+      tl.to('#sc2',{opacity:0,y:-38,duration:0.4,ease:'power2.in'},14.1);
+
+      // SCENE 3 : CBCS Gradebook (14.5 - 21.5s)
+      tl.set('#sc3',{opacity:1,pointerEvents:'auto'},14.5);
+      rOn('#rb-s',14.5); rOff('#rb-s',21.5);
+      tl.fromTo('#s3hd',{opacity:0,y:-18},{opacity:1,y:0,duration:0.42,ease:'power2.out'},14.6);
+      tl.fromTo('#s3gc',{opacity:0,x:-60},{opacity:1,x:0,duration:0.6,ease:'power3.out'},14.7);
+      tl.fromTo('#sc3 .glass',{opacity:0,x:60},{opacity:1,x:0,duration:0.6,ease:'power3.out'},14.85);
+      tl.to('#s3f1',{opacity:1,duration:0.35},15.4);
+      tl.to('#s3f2',{opacity:1,duration:0.35},16.4);
+      tl.to('#s3f3',{opacity:1,duration:0.35},17.4);
+      tl.to('#s3chip',{opacity:1,duration:0.4,ease:'back.out(1.5)'},18.0);
+      tl.to('#s3gpa',{opacity:1,scale:1,duration:0.5,ease:'back.out(1.3)'},18.8);
+      sub('Students see their <span class="hlb">CBCS grades</span> and live class rank the moment a teacher submits marks &mdash; no waiting for result day.', 15.0, 18.5);
+      sub('Grade points and CGPA are <span class="hl">auto-calculated</span>. One click generates a printable report card &mdash; no manual preparation needed.', 18.7, 21.2);
+      tl.to('#sc3',{opacity:0,scale:0.97,duration:0.4,ease:'power2.in'},21.1);
+
+      // SCENE 4 : 3D Chemistry Lab (21.5 - 28.5s)
+      tl.set('#sc4',{opacity:1,pointerEvents:'auto'},21.5);
+      rOn('#rb-s',21.5); rOff('#rb-s',28.5);
+      tl.fromTo('#s4hd',{opacity:0,y:-18},{opacity:1,y:0,duration:0.42,ease:'power2.out'},21.6);
+      tl.fromTo('#s4fc',{opacity:0,scale:0.9},{opacity:1,scale:1,duration:0.7,ease:'power3.out'},21.7);
+      tl.to('#s4tc',{opacity:1,duration:0.4},22.1);
+      tl.to('#s4pc',{opacity:1,duration:0.4},22.35);
+      tl.to('#s4pre',{height:70,opacity:0.95,duration:2.6,ease:'power2.out'},22.5);
+      const tObj={v:25.0};
+      tl.to(tObj,{v:43.2,duration:2.8,ease:'power1.inOut',onUpdate:()=>{const e=document.getElementById('s4tv');if(e)e.innerText=tObj.v.toFixed(1)+'\u00b0C';}},22.5);
+      tl.to('#s4tb',{width:'77%',duration:2.8,ease:'power1.inOut'},22.5);
+      const pObj={v:7.0};
+      tl.to(pObj,{v:12.4,duration:2.8,ease:'power1.inOut',onUpdate:()=>{const e=document.getElementById('s4pv');if(e)e.innerText=pObj.v.toFixed(2);}},22.5);
+      tl.to('#s4pb',{width:'89%',duration:2.8,ease:'power1.inOut'},22.5);
+      tl.to('#s4why',{opacity:1,duration:0.5},24.6);
+      tl.to('#s4chip',{opacity:1,duration:0.4,ease:'back.out(1.5)'},25.6);
+      sub('The <span class="hlb">Virtual Science Lab</span> lets students run real chemical reactions in 3D &mdash; safely, from any device, with zero physical chemicals needed.', 21.9, 25.3);
+      sub('Temperature, pH, and kinetics are <span class="hl">auto-logged</span> to the student&rsquo;s dossier and auto-graded &mdash; zero teacher intervention required.', 25.5, 28.2);
+      tl.to('#sc4',{opacity:0,y:-38,duration:0.4,ease:'power2.in'},28.1);
+
+      // SCENE 5 : Payroll (28.5 - 35.5s)
+      tl.set('#sc5',{opacity:1,pointerEvents:'auto'},28.5);
+      rOn('#rb-a',28.5); rOff('#rb-a',35.5);
+      tl.fromTo('#s5hd',{opacity:0,y:-18},{opacity:1,y:0,duration:0.42,ease:'power2.out'},28.6);
+      tl.fromTo('#s5tc',{opacity:0,x:-60},{opacity:1,x:0,duration:0.6,ease:'power3.out'},28.7);
+      tl.fromTo('#s5dbtn',{scale:1},{scale:0.91,duration:0.13,yoyo:true,repeat:1},30.3);
+      tl.call(()=>{document.getElementById('s5s1').innerText='\u2713 Disbursed';},[], 30.5);
+      tl.to('#s5s1',{background:'#0A4D44',color:'#FFFFFF',duration:0.22},30.5);
+      tl.call(()=>{document.getElementById('s5s2').innerText='\u2713 Disbursed';},[], 30.75);
+      tl.to('#s5s2',{background:'#0A4D44',color:'#FFFFFF',duration:0.22},30.75);
+      tl.call(()=>{document.getElementById('s5s3').innerText='\u2713 Disbursed';},[], 31.0);
+      tl.to('#s5s3',{background:'#0A4D44',color:'#FFFFFF',duration:0.22},31.0);
+      tl.call(()=>{document.getElementById('s5s4').innerText='\u2713 Disbursed';},[], 31.25);
+      tl.to('#s5s4',{background:'#0A4D44',color:'#FFFFFF',duration:0.22},31.25);
+      tl.to('#s5vc',{opacity:1,x:0,duration:0.6,ease:'back.out(1.2)'},31.6);
+      tl.fromTo('#s5stmp',{scale:4,opacity:0,rotation:22},{scale:1,opacity:1,rotation:-12,duration:0.5,ease:'back.out(2)'},32.4);
+      tl.to('#s5why',{opacity:1,duration:0.5},33.0);
+      tl.to('#s5chip',{opacity:1,duration:0.4,ease:'back.out(1.5)'},33.8);
+      sub('The <span class="hla">Admin Directorate</span> manages all 36 staff across 6 wings &mdash; salaries, deductions, and EPF are all computed automatically.', 28.9, 32.1);
+      sub('One click disburses <span class="hla">\u20b914.4 Lakh in seconds</span> &mdash; replacing days of manual bank transfers and stacks of paper salary registers.', 32.3, 35.2);
+      tl.to('#sc5',{opacity:0,scale:0.97,duration:0.4,ease:'power2.in'},35.1);
+
+      // SCENE 6 : Outro (35.5 - 38s)
+      tl.set('#sc6',{opacity:1,pointerEvents:'auto'},35.5);
+      tl.fromTo('#s6hed',{opacity:0,scale:0.92},{opacity:1,scale:1,duration:0.65,ease:'power3.out'},35.6);
+      tl.fromTo('#s6pills > span',{opacity:0,y:22},{opacity:1,y:0,duration:0.4,stagger:0.1,ease:'back.out(1.4)'},36.1);
+      tl.fromTo('#s6lock',{opacity:0,y:30},{opacity:1,y:0,duration:0.55,ease:'back.out(1.3)'},36.9);
+      sub('EduNexus &mdash; built for schools that refuse to run on spreadsheets and guesswork.', 35.9, 37.8);
+
+      window.__timelines['main'] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

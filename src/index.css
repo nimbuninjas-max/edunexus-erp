@@ -1,0 +1,899 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Smooth Paper Plane Launch & Chemistry Lab Bubble Animations */
+@keyframes planeLaunch {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  40% {
+    transform: translate(10px, -10px) scale(1.18) rotate(-12deg);
+  }
+  80% {
+    transform: translate(-4px, 2px) scale(0.95) rotate(4deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-75px) scale(1.25);
+    opacity: 0;
+  }
+}
+
+.animate-plane-send {
+  animation: planeLaunch 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-chem-bubble {
+  animation: bubbleRise 1.8s infinite ease-in;
+}
+
+/* ============================================================================
+   10-THEME WORLD CULTURAL & DARK ENGINE
+   1. botanical (India Heritage - Royal Nalanda)
+   2. kyoto (Japan Zen - Kyoto Sakura)
+   3. swiss (Switzerland - Alpine Zurich)
+   4. nordic (Sweden - Stockholm Aurora)
+   5. santorini (Greece - Aegean Cyclades)
+   6. marrakech (Morocco - Sahara Riyad)
+   7. oxford (United Kingdom - Bodleian Navy)
+   8. slate (USA - Silicon Valley Titanium)
+   9. dark (Obsidian Carbon Dark)
+   10. midnight (Tokyo Cyber-Midnight OLED)
+/* ============================================================================
+   THEME 1: MODERN EMERALD NEXUS (Clean Executive Daylight & Radiant Emerald)
+   ============================================================================ */
+.theme-botanical {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+.theme-botanical .bg-\[\#F5F0E6\],
+.theme-botanical .bg-\[\#FAF6EE\],
+.theme-botanical .bg-\[\#F7F3EB\],
+.theme-botanical .bg-\[\#F9F6F0\],
+.theme-botanical .bg-\[\#F4EFE4\],
+.theme-botanical .bg-\[\#F2ECE1\] {
+  background-color: #F8FAFC !important;
+}
+.theme-botanical .bg-\[\#FFFDF9\] {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.03) !important;
+}
+.theme-botanical .bg-\[\#EAE2D3\],
+.theme-botanical .bg-\[\#EFE9DC\] {
+  background-color: #F1F5F9 !important;
+}
+.theme-botanical .border-\[\#DDD4C2\],
+.theme-botanical .border-\[\#EAE2D3\],
+.theme-botanical .border-\[\#D5CBB8\],
+.theme-botanical .border-\[\#E2D9C8\],
+.theme-botanical .border-\[\#C8BFA8\],
+.theme-botanical .border-\[\#E6C89C\] {
+  border-color: #E2E8F0 !important;
+}
+.theme-botanical .divide-\[\#EAE2D3\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #F1F5F9 !important;
+}
+.theme-botanical .bg-\[\#072E29\],
+.theme-botanical .bg-\[\#0A3630\],
+.theme-botanical .bg-\[\#062824\] {
+  background-color: #064E3B !important;
+  border-color: #047857 !important;
+  color: #FFFFFF !important;
+}
+.theme-botanical .bg-\[\#0A4D44\],
+.theme-botanical .bg-\[\#0E6B5E\],
+.theme-botanical .bg-\[\#124E45\] {
+  background-color: #047857 !important;
+  color: #FFFFFF !important;
+}
+.theme-botanical .hover\:bg-\[\#073831\]:hover {
+  background-color: #065F46 !important;
+}
+.theme-botanical .text-\[\#0A4D44\],
+.theme-botanical .text-\[\#0E6B5E\],
+.theme-botanical .text-\[\#072E29\] {
+  color: #047857 !important;
+}
+.theme-botanical .text-\[\#1C2A27\],
+.theme-botanical .text-\[\#2C3532\],
+.theme-botanical .text-\[\#3A3226\],
+.theme-botanical .text-\[\#3C3830\] {
+  color: #0F172A !important;
+}
+.theme-botanical .text-\[\#686052\],
+.theme-botanical .text-\[\#5A5346\],
+.theme-botanical .text-\[\#4A443B\] {
+  color: #64748B !important;
+}
+.theme-botanical .bg-\[\#EFF5F3\] {
+  background-color: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+  color: #047857 !important;
+}
+.theme-botanical .bg-\[\#FAF2F2\] {
+  background-color: #FEF2F2 !important;
+  border-color: #FECACA !important;
+  color: #DC2626 !important;
+}
+.theme-botanical .bg-\[\#FFF9ED\] {
+  background-color: #FFFBEB !important;
+  border-color: #FDE68A !important;
+  color: #D97706 !important;
+}
+.theme-botanical input,
+.theme-botanical select,
+.theme-botanical textarea {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+}
+.theme-botanical input:focus,
+.theme-botanical select:focus,
+.theme-botanical textarea:focus {
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.15) !important;
+}
+.theme-botanical tr.hover\:bg-\[\#F7F3EB\]:hover,
+.theme-botanical tr.hover\:bg-\[\#F5F0E6\]:hover {
+  background-color: #F8FAFC !important;
+}
+
+/* Theme 2: Japan — Kyoto Sakura (Blossom Paper & Torii Crimson) */
+.theme-kyoto {
+  background-color: #FCF5F7 !important;
+  color: #2B131C !important;
+}
+.theme-kyoto .bg-\[\#F5F0E6\],
+.theme-kyoto .bg-\[\#FAF6EE\],
+.theme-kyoto .bg-\[\#F7F3EB\],
+.theme-kyoto .bg-\[\#F9F6F0\],
+.theme-kyoto .bg-\[\#F4EFE4\],
+.theme-kyoto .bg-\[\#F2ECE1\] {
+  background-color: #FDF7F9 !important;
+}
+.theme-kyoto .bg-\[\#FFFDF9\] {
+  background-color: #FFFFFF !important;
+}
+.theme-kyoto .bg-\[\#EAE2D3\],
+.theme-kyoto .bg-\[\#EFE9DC\] {
+  background-color: #F6E4EA !important;
+}
+.theme-kyoto .border-\[\#DDD4C2\],
+.theme-kyoto .border-\[\#EAE2D3\],
+.theme-kyoto .border-\[\#D5CBB8\],
+.theme-kyoto .border-\[\#E2D9C8\] {
+  border-color: #EBCAD5 !important;
+}
+.theme-kyoto .bg-\[\#072E29\],
+.theme-kyoto .bg-\[\#0A3630\],
+.theme-kyoto .bg-\[\#062824\] {
+  background-color: #381020 !important;
+}
+.theme-kyoto .bg-\[\#0A4D44\],
+.theme-kyoto .bg-\[\#0E6B5E\],
+.theme-kyoto .bg-\[\#124E45\] {
+  background-color: #BE185D !important;
+}
+.theme-kyoto .text-\[\#0A4D44\],
+.theme-kyoto .text-\[\#0E6B5E\] {
+  color: #BE185D !important;
+}
+.theme-kyoto .bg-\[\#EFF5F3\] {
+  background-color: #FCE7F3 !important;
+}
+
+/* Theme 3: Switzerland — Alpine Zurich (Glacier Snow & Matterhorn Cobalt) */
+.theme-swiss {
+  background-color: #EEF4F8 !important;
+  color: #0C1E2E !important;
+}
+.theme-swiss .bg-\[\#F5F0E6\],
+.theme-swiss .bg-\[\#FAF6EE\],
+.theme-swiss .bg-\[\#F7F3EB\],
+.theme-swiss .bg-\[\#F9F6F0\],
+.theme-swiss .bg-\[\#F4EFE4\],
+.theme-swiss .bg-\[\#F2ECE1\] {
+  background-color: #F5F9FC !important;
+}
+.theme-swiss .bg-\[\#FFFDF9\] {
+  background-color: #FFFFFF !important;
+}
+.theme-swiss .bg-\[\#EAE2D3\],
+.theme-swiss .bg-\[\#EFE9DC\] {
+  background-color: #DCE8F2 !important;
+}
+.theme-swiss .border-\[\#DDD4C2\],
+.theme-swiss .border-\[\#EAE2D3\],
+.theme-swiss .border-\[\#D5CBB8\],
+.theme-swiss .border-\[\#E2D9C8\] {
+  border-color: #C4D7E8 !important;
+}
+.theme-swiss .bg-\[\#072E29\],
+.theme-swiss .bg-\[\#0A3630\],
+.theme-swiss .bg-\[\#062824\] {
+  background-color: #0D2238 !important;
+}
+.theme-swiss .bg-\[\#0A4D44\],
+.theme-swiss .bg-\[\#0E6B5E\],
+.theme-swiss .bg-\[\#124E45\] {
+  background-color: #0284C7 !important;
+}
+.theme-swiss .text-\[\#0A4D44\],
+.theme-swiss .text-\[\#0E6B5E\] {
+  color: #0369A1 !important;
+}
+.theme-swiss .bg-\[\#EFF5F3\] {
+  background-color: #E0F2FE !important;
+}
+
+/* Theme 4: Sweden — Nordic Aurora (Arctic Mist & Fjord Teal) */
+.theme-nordic {
+  background-color: #EDF6F5 !important;
+  color: #0D2628 !important;
+}
+.theme-nordic .bg-\[\#F5F0E6\],
+.theme-nordic .bg-\[\#FAF6EE\],
+.theme-nordic .bg-\[\#F7F3EB\],
+.theme-nordic .bg-\[\#F9F6F0\] {
+  background-color: #F4FAF9 !important;
+}
+.theme-nordic .bg-\[\#FFFDF9\] {
+  background-color: #FFFFFF !important;
+}
+.theme-nordic .bg-\[\#EAE2D3\],
+.theme-nordic .bg-\[\#EFE9DC\] {
+  background-color: #D8ECEA !important;
+}
+.theme-nordic .border-\[\#DDD4C2\],
+.theme-nordic .border-\[\#EAE2D3\],
+.theme-nordic .border-\[\#D5CBB8\],
+.theme-nordic .border-\[\#E2D9C8\] {
+  border-color: #BCE0DC !important;
+}
+.theme-nordic .bg-\[\#072E29\],
+.theme-nordic .bg-\[\#0A3630\],
+.theme-nordic .bg-\[\#062824\] {
+  background-color: #0B2528 !important;
+}
+.theme-nordic .bg-\[\#0A4D44\],
+.theme-nordic .bg-\[\#0E6B5E\],
+.theme-nordic .bg-\[\#124E45\] {
+  background-color: #0D9488 !important;
+}
+.theme-nordic .text-\[\#0A4D44\],
+.theme-nordic .text-\[\#0E6B5E\] {
+  color: #0F766E !important;
+}
+.theme-nordic .bg-\[\#EFF5F3\] {
+  background-color: #CCFBF1 !important;
+}
+
+/* Theme 5: Greece — Aegean Santorini (Cycladic White & Aegean Sapphire) */
+.theme-santorini {
+  background-color: #EFF6FF !important;
+  color: #0F1E36 !important;
+}
+.theme-santorini .bg-\[\#F5F0E6\],
+.theme-santorini .bg-\[\#FAF6EE\],
+.theme-santorini .bg-\[\#F7F3EB\],
+.theme-santorini .bg-\[\#F9F6F0\] {
+  background-color: #F6FAFF !important;
+}
+.theme-santorini .bg-\[\#FFFDF9\] {
+  background-color: #FFFFFF !important;
+}
+.theme-santorini .bg-\[\#EAE2D3\],
+.theme-santorini .bg-\[\#EFE9DC\] {
+  background-color: #DBEAFE !important;
+}
+.theme-santorini .border-\[\#DDD4C2\],
+.theme-santorini .border-\[\#EAE2D3\],
+.theme-santorini .border-\[\#D5CBB8\],
+.theme-santorini .border-\[\#E2D9C8\] {
+  border-color: #BFDBFE !important;
+}
+.theme-santorini .bg-\[\#072E29\],
+.theme-santorini .bg-\[\#0A3630\],
+.theme-santorini .bg-\[\#062824\] {
+  background-color: #0F2347 !important;
+}
+.theme-santorini .bg-\[\#0A4D44\],
+.theme-santorini .bg-\[\#0E6B5E\],
+.theme-santorini .bg-\[\#124E45\] {
+  background-color: #1D4ED8 !important;
+}
+.theme-santorini .text-\[\#0A4D44\],
+.theme-santorini .text-\[\#0E6B5E\] {
+  color: #1D4ED8 !important;
+}
+.theme-santorini .bg-\[\#EFF5F3\] {
+  background-color: #DBEAFE !important;
+}
+
+/* Theme 6: Morocco — Marrakech Riyad (Sahara Dune & Terracotta Spice) */
+.theme-marrakech {
+  background-color: #FDF5EA !important;
+  color: #2D180E !important;
+}
+.theme-marrakech .bg-\[\#F5F0E6\],
+.theme-marrakech .bg-\[\#FAF6EE\],
+.theme-marrakech .bg-\[\#F7F3EB\],
+.theme-marrakech .bg-\[\#F9F6F0\] {
+  background-color: #FEF9F2 !important;
+}
+.theme-marrakech .bg-\[\#FFFDF9\] {
+  background-color: #FFFFFF !important;
+}
+.theme-marrakech .bg-\[\#EAE2D3\],
+.theme-marrakech .bg-\[\#EFE9DC\] {
+  background-color: #F7E5CE !important;
+}
+.theme-marrakech .border-\[\#DDD4C2\],
+.theme-marrakech .border-\[\#EAE2D3\],
+.theme-marrakech .border-\[\#D5CBB8\],
+.theme-marrakech .border-\[\#E2D9C8\] {
+  border-color: #EBD0B0 !important;
+}
+.theme-marrakech .bg-\[\#072E29\],
+.theme-marrakech .bg-\[\#0A3630\],
+.theme-marrakech .bg-\[\#062824\] {
+  background-color: #3D1C0D !important;
+}
+.theme-marrakech .bg-\[\#0A4D44\],
+.theme-marrakech .bg-\[\#0E6B5E\],
+.theme-marrakech .bg-\[\#124E45\] {
+  background-color: #C2410C !important;
+}
+.theme-marrakech .text-\[\#0A4D44\],
+.theme-marrakech .text-\[\#0E6B5E\] {
+  color: #C2410C !important;
+}
+.theme-marrakech .bg-\[\#EFF5F3\] {
+  background-color: #FFEDD5 !important;
+}
+
+/* Theme 7: United Kingdom — Oxford Bodleian (Vellum Parchment & Royal Navy) */
+.theme-oxford {
+  background-color: #F4F2EA !important;
+  color: #141C2E !important;
+}
+.theme-oxford .bg-\[\#F5F0E6\],
+.theme-oxford .bg-\[\#FAF6EE\],
+.theme-oxford .bg-\[\#F7F3EB\],
+.theme-oxford .bg-\[\#F9F6F0\] {
+  background-color: #F9F8F3 !important;
+}
+.theme-oxford .bg-\[\#FFFDF9\] {
+  background-color: #FFFFFF !important;
+}
+.theme-oxford .bg-\[\#EAE2D3\],
+.theme-oxford .bg-\[\#EFE9DC\] {
+  background-color: #E5E2D5 !important;
+}
+.theme-oxford .border-\[\#DDD4C2\],
+.theme-oxford .border-\[\#EAE2D3\],
+.theme-oxford .border-\[\#D5CBB8\],
+.theme-oxford .border-\[\#E2D9C8\] {
+  border-color: #D2CEBE !important;
+}
+.theme-oxford .bg-\[\#072E29\],
+.theme-oxford .bg-\[\#0A3630\],
+.theme-oxford .bg-\[\#062824\] {
+  background-color: #141E38 !important;
+}
+.theme-oxford .bg-\[\#0A4D44\],
+.theme-oxford .bg-\[\#0E6B5E\],
+.theme-oxford .bg-\[\#124E45\] {
+  background-color: #3730A3 !important;
+}
+.theme-oxford .text-\[\#0A4D44\],
+.theme-oxford .text-\[\#0E6B5E\] {
+  color: #3730A3 !important;
+}
+.theme-oxford .bg-\[\#EFF5F3\] {
+  background-color: #E0E7FF !important;
+}
+
+/* Theme 8: USA — Silicon Valley Slate (Crisp Architectural Daylight) */
+.theme-slate {
+  background-color: #F1F5F9 !important;
+  color: #0F172A !important;
+}
+.theme-slate .bg-\[\#F5F0E6\],
+.theme-slate .bg-\[\#FAF6EE\],
+.theme-slate .bg-\[\#F7F3EB\],
+.theme-slate .bg-\[\#F9F6F0\],
+.theme-slate .bg-\[\#F4EFE4\],
+.theme-slate .bg-\[\#F2ECE1\] {
+  background-color: #F8FAFC !important;
+}
+.theme-slate .bg-\[\#FFFDF9\] {
+  background-color: #FFFFFF !important;
+}
+.theme-slate .bg-\[\#EAE2D3\],
+.theme-slate .bg-\[\#EFE9DC\] {
+  background-color: #E2E8F0 !important;
+}
+.theme-slate .border-\[\#DDD4C2\],
+.theme-slate .border-\[\#EAE2D3\],
+.theme-slate .border-\[\#D5CBB8\],
+.theme-slate .border-\[\#E2D9C8\] {
+  border-color: #CBD5E1 !important;
+}
+.theme-slate .bg-\[\#072E29\],
+.theme-slate .bg-\[\#0A3630\],
+.theme-slate .bg-\[\#062824\] {
+  background-color: #0F172A !important;
+}
+.theme-slate .bg-\[\#0A4D44\],
+.theme-slate .bg-\[\#0E6B5E\],
+.theme-slate .bg-\[\#124E45\] {
+  background-color: #1E40AF !important;
+}
+.theme-slate .text-\[\#0A4D44\],
+.theme-slate .text-\[\#0E6B5E\] {
+  color: #1D4ED8 !important;
+}
+.theme-slate .bg-\[\#EFF5F3\] {
+  background-color: #EFF6FF !important;
+}
+
+/* Theme 9: Obsidian Dark Mode */
+.theme-dark {
+  background-color: #0B1114 !important;
+  color: #E2E8F0 !important;
+}
+.theme-dark .bg-\[\#F5F0E6\],
+.theme-dark .bg-\[\#F4EFE4\] {
+  background-color: #0B1114 !important;
+  color: #E2E8F0 !important;
+}
+.theme-dark .bg-\[\#FAF6EE\],
+.theme-dark .bg-\[\#F2ECE1\],
+.theme-dark .bg-\[\#F7F3EB\],
+.theme-dark .bg-\[\#F9F6F0\] {
+  background-color: #111A1F !important;
+  color: #E2E8F0 !important;
+}
+.theme-dark .bg-\[\#FFFDF9\] {
+  background-color: #152026 !important;
+  color: #F1F5F9 !important;
+}
+.theme-dark .bg-\[\#EAE2D3\],
+.theme-dark .bg-\[\#EFE9DC\] {
+  background-color: #1E2D36 !important;
+  color: #E2E8F0 !important;
+}
+.theme-dark .bg-\[\#EFF5F3\] {
+  background-color: #112A26 !important;
+  color: #A7F3D0 !important;
+}
+.theme-dark .bg-\[\#FAF2F2\],
+.theme-dark .bg-\[\#F9EBEB\] {
+  background-color: #2A1517 !important;
+  color: #FECACA !important;
+}
+.theme-dark .bg-\[\#FFF9ED\],
+.theme-dark .bg-\[\#FDF4E7\] {
+  background-color: #261E10 !important;
+  color: #FDE68A !important;
+}
+.theme-dark .border-\[\#DDD4C2\],
+.theme-dark .border-\[\#EAE2D3\],
+.theme-dark .border-\[\#D5CBB8\],
+.theme-dark .border-\[\#E2D9C8\],
+.theme-dark .border-\[\#B8D8D0\],
+.theme-dark .border-\[\#C5D6D1\] {
+  border-color: #24353F !important;
+}
+.theme-dark .divide-\[\#EAE2D3\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #24353F !important;
+}
+.theme-dark .text-\[\#1C2A27\],
+.theme-dark .text-\[\#2C3532\],
+.theme-dark .text-\[\#3C3830\],
+.theme-dark .text-\[\#3D3830\] {
+  color: #F1F5F9 !important;
+}
+.theme-dark .text-\[\#686052\],
+.theme-dark .text-\[\#5A5346\],
+.theme-dark .text-\[\#4A443B\],
+.theme-dark .text-\[\#8C8270\] {
+  color: #94A3B8 !important;
+}
+.theme-dark .text-\[\#0A4D44\],
+.theme-dark .text-\[\#0E6B5E\] {
+  color: #34D399 !important;
+}
+.theme-dark .text-\[\#8B2626\],
+.theme-dark .text-\[\#9E2A2B\] {
+  color: #F87171 !important;
+}
+.theme-dark .text-\[\#8A5A19\],
+.theme-dark .text-\[\#9A6B26\],
+.theme-dark .text-\[\#9A5B13\] {
+  color: #FBBF24 !important;
+}
+.theme-dark input,
+.theme-dark select,
+.theme-dark textarea {
+  background-color: #0F171C !important;
+  color: #F1F5F9 !important;
+  border-color: #2B3F4B !important;
+}
+/* All Light Cards & Opacity Variants in Dark Mode */
+.theme-dark .bg-\[\#FFFDF9\],
+.theme-dark .bg-\[\#FAF7F0\],
+.theme-dark .bg-\[\#FAF6EE\],
+.theme-dark .bg-\[\#FAF6EE\]\/95,
+.theme-dark .bg-\[\#FFFDF9\]\/95,
+.theme-dark .bg-\[\#FAF8F3\],
+.theme-dark .bg-\[\#FAF8F5\],
+.theme-dark .bg-\[\#FCFBF7\],
+.theme-dark .bg-\[\#FDF4E7\],
+.theme-dark .bg-\[\#FFF9ED\],
+.theme-dark .bg-\[\#F7F3EB\],
+.theme-dark .bg-\[\#F7FBF9\],
+.theme-dark .bg-\[\#F9F6F0\],
+.theme-dark .bg-\[\#F5F0E6\],
+.theme-dark .bg-\[\#F4EFE4\],
+.theme-dark .bg-\[\#F3EFE4\],
+.theme-dark .bg-\[\#F3EDE0\],
+.theme-dark .bg-\[\#F3EFE8\],
+.theme-dark .bg-\[\#F2ECE0\],
+.theme-dark .bg-\[\#F2ECE1\],
+.theme-dark .bg-\[\#EFE8D8\],
+.theme-dark .bg-\[\#EFE9DC\],
+.theme-dark .bg-\[\#EFECE6\],
+.theme-dark .bg-\[\#EAE2D3\],
+.theme-dark .bg-\[\#EAE4D7\],
+.theme-dark .bg-\[\#E5DFD2\],
+.theme-dark .bg-\[\#E2D9C8\],
+.theme-dark .bg-\[\#E2DDD2\],
+.theme-dark .bg-\[\#DCECE7\],
+.theme-dark .bg-white,
+.theme-dark .bg-slate-50,
+.theme-dark .bg-slate-100 {
+  background-color: #121A1F !important;
+  color: #F1F5F9 !important;
+  border-color: #24353F !important;
+}
+.theme-dark .text-slate-900,
+.theme-dark .text-slate-800,
+.theme-dark .text-slate-700 {
+  color: #F1F5F9 !important;
+}
+.theme-dark .text-slate-600,
+.theme-dark .text-slate-500,
+.theme-dark .text-slate-400 {
+  color: #94A3B8 !important;
+}
+.theme-dark .border-slate-100,
+.theme-dark .border-slate-200,
+.theme-dark .border-slate-300 {
+  border-color: #24353F !important;
+}
+.theme-dark .bg-\[\#072E29\],
+.theme-dark .bg-\[\#0A3630\],
+.theme-dark .bg-\[\#062824\] {
+  background-color: #0E171C !important;
+}
+/* Universal Dark Mode Hover Protection */
+.theme-dark tr:hover,
+.theme-dark tr:hover td,
+.theme-dark tr:hover th,
+.theme-dark .hover\:bg-\[\#F7F3EB\]:hover,
+.theme-dark .hover\:bg-\[\#F5F0E6\]:hover,
+.theme-dark .hover\:bg-\[\#EAE2D3\]:hover,
+.theme-dark .hover\:bg-\[\#EFE9DC\]:hover,
+.theme-dark .hover\:bg-\[\#F3EFE4\]:hover,
+.theme-dark .hover\:bg-\[\#F3EFE8\]:hover,
+.theme-dark .hover\:bg-\[\#EFF5F3\]:hover,
+.theme-dark .hover\:bg-\[\#DDD4C2\]:hover,
+.theme-dark .hover\:bg-\[\#DCECE7\]:hover,
+.theme-dark .hover\:bg-\[\#FFFDF9\]:hover,
+.theme-dark .hover\:bg-white:hover,
+.theme-dark .hover\:bg-slate-50:hover,
+.theme-dark .hover\:bg-slate-100:hover,
+.theme-dark .hover\:bg-slate-200:hover {
+  background-color: #1A262E !important;
+  color: #F1F5F9 !important;
+}
+.theme-dark tr:hover td *,
+.theme-dark .hover\:bg-\[\#F7F3EB\]:hover *,
+.theme-dark .hover\:bg-\[\#F5F0E6\]:hover *,
+.theme-dark .hover\:bg-\[\#EAE2D3\]:hover *,
+.theme-dark .hover\:bg-\[\#EFE9DC\]:hover *,
+.theme-dark .hover\:bg-\[\#F3EFE4\]:hover *,
+.theme-dark .hover\:bg-\[\#EFF5F3\]:hover *,
+.theme-dark .hover\:bg-\[\#DDD4C2\]:hover *,
+.theme-dark .hover\:bg-white:hover *,
+.theme-dark .hover\:bg-slate-50:hover * {
+  color: #F1F5F9 !important;
+}
+
+/* Theme 10: Tokyo Cyber-Midnight (OLED Deep Space) */
+.theme-midnight {
+  background-color: #090D16 !important;
+  color: #E2E8F0 !important;
+}
+.theme-midnight .bg-\[\#F5F0E6\],
+.theme-midnight .bg-\[\#F4EFE4\] {
+  background-color: #090D16 !important;
+  color: #E2E8F0 !important;
+}
+.theme-midnight .bg-\[\#FAF6EE\],
+.theme-midnight .bg-\[\#F2ECE1\],
+.theme-midnight .bg-\[\#F7F3EB\],
+.theme-midnight .bg-\[\#F9F6F0\] {
+  background-color: #0F1624 !important;
+  color: #E2E8F0 !important;
+}
+.theme-midnight .bg-\[\#FFFDF9\] {
+  background-color: #131C2E !important;
+  color: #F8FAFC !important;
+}
+.theme-midnight .bg-\[\#EAE2D3\],
+.theme-midnight .bg-\[\#EFE9DC\] {
+  background-color: #1E293B !important;
+  color: #E2E8F0 !important;
+}
+.theme-midnight .bg-\[\#072E29\],
+.theme-midnight .bg-\[\#0A3630\],
+.theme-midnight .bg-\[\#062824\] {
+  background-color: #0B132B !important;
+}
+.theme-midnight .bg-\[\#0A4D44\],
+.theme-midnight .bg-\[\#0E6B5E\],
+.theme-midnight .bg-\[\#124E45\] {
+  background-color: #2563EB !important;
+}
+.theme-midnight .bg-\[\#EFF5F3\] {
+  background-color: #172554 !important;
+  color: #93C5FD !important;
+}
+.theme-midnight .bg-\[\#FAF2F2\],
+.theme-midnight .bg-\[\#F9EBEB\] {
+  background-color: #2D1219 !important;
+  color: #FCA5A5 !important;
+}
+.theme-midnight .bg-\[\#FFF9ED\],
+.theme-midnight .bg-\[\#FDF4E7\] {
+  background-color: #271E0F !important;
+  color: #FDE68A !important;
+}
+.theme-midnight .border-\[\#DDD4C2\],
+.theme-midnight .border-\[\#EAE2D3\],
+.theme-midnight .border-\[\#D5CBB8\],
+.theme-midnight .border-\[\#E2D9C8\],
+.theme-midnight .border-\[\#B8D8D0\],
+.theme-midnight .border-\[\#C5D6D1\] {
+  border-color: #1E293B !important;
+}
+.theme-midnight .divide-\[\#EAE2D3\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1E293B !important;
+}
+.theme-midnight .text-\[\#1C2A27\],
+.theme-midnight .text-\[\#2C3532\],
+.theme-midnight .text-\[\#3C3830\],
+.theme-midnight .text-\[\#3D3830\] {
+  color: #F8FAFC !important;
+}
+.theme-midnight .text-\[\#686052\],
+.theme-midnight .text-\[\#5A5346\],
+.theme-midnight .text-\[\#4A443B\],
+.theme-midnight .text-\[\#8C8270\] {
+  color: #94A3B8 !important;
+}
+.theme-midnight .text-\[\#0A4D44\],
+.theme-midnight .text-\[\#0E6B5E\] {
+  color: #60A5FA !important;
+}
+.theme-midnight .text-\[\#8A5A19\],
+.theme-midnight .text-\[\#9A6B26\],
+.theme-midnight .text-\[\#9A5B13\] {
+  color: #FBBF24 !important;
+}
+.theme-midnight input,
+.theme-midnight select,
+.theme-midnight textarea {
+  background-color: #0B111E !important;
+  color: #F8FAFC !important;
+  border-color: #28354E !important;
+}
+/* All Light Cards & Opacity Variants in Cyber Midnight */
+.theme-midnight .bg-\[\#FFFDF9\],
+.theme-midnight .bg-\[\#FAF7F0\],
+.theme-midnight .bg-\[\#FAF6EE\],
+.theme-midnight .bg-\[\#FAF6EE\]\/95,
+.theme-midnight .bg-\[\#FFFDF9\]\/95,
+.theme-midnight .bg-\[\#FAF8F3\],
+.theme-midnight .bg-\[\#FAF8F5\],
+.theme-midnight .bg-\[\#FCFBF7\],
+.theme-midnight .bg-\[\#FDF4E7\],
+.theme-midnight .bg-\[\#FFF9ED\],
+.theme-midnight .bg-\[\#F7F3EB\],
+.theme-midnight .bg-\[\#F7FBF9\],
+.theme-midnight .bg-\[\#F9F6F0\],
+.theme-midnight .bg-\[\#F5F0E6\],
+.theme-midnight .bg-\[\#F4EFE4\],
+.theme-midnight .bg-\[\#F3EFE4\],
+.theme-midnight .bg-\[\#F3EDE0\],
+.theme-midnight .bg-\[\#F3EFE8\],
+.theme-midnight .bg-\[\#F2ECE0\],
+.theme-midnight .bg-\[\#F2ECE1\],
+.theme-midnight .bg-\[\#EFE8D8\],
+.theme-midnight .bg-\[\#EFE9DC\],
+.theme-midnight .bg-\[\#EFECE6\],
+.theme-midnight .bg-\[\#EAE2D3\],
+.theme-midnight .bg-\[\#EAE4D7\],
+.theme-midnight .bg-\[\#E5DFD2\],
+.theme-midnight .bg-\[\#E2D9C8\],
+.theme-midnight .bg-\[\#E2DDD2\],
+.theme-midnight .bg-\[\#DCECE7\],
+.theme-midnight .bg-white,
+.theme-midnight .bg-slate-50,
+.theme-midnight .bg-slate-100 {
+  background-color: #131C2E !important;
+  color: #F8FAFC !important;
+  border-color: #1E293B !important;
+}
+.theme-midnight .text-slate-900,
+.theme-midnight .text-slate-800,
+.theme-midnight .text-slate-700 {
+  color: #F8FAFC !important;
+}
+.theme-midnight .text-slate-600,
+.theme-midnight .text-slate-500,
+.theme-midnight .text-slate-400 {
+  color: #94A3B8 !important;
+}
+.theme-midnight .border-slate-100,
+.theme-midnight .border-slate-200,
+.theme-midnight .border-slate-300 {
+  border-color: #1E293B !important;
+}
+/* Universal Cyber Midnight Hover Protection */
+.theme-midnight tr:hover,
+.theme-midnight tr:hover td,
+.theme-midnight tr:hover th,
+.theme-midnight .hover\:bg-\[\#F7F3EB\]:hover,
+.theme-midnight .hover\:bg-\[\#F5F0E6\]:hover,
+.theme-midnight .hover\:bg-\[\#EAE2D3\]:hover,
+.theme-midnight .hover\:bg-\[\#EFE9DC\]:hover,
+.theme-midnight .hover\:bg-\[\#F3EFE4\]:hover,
+.theme-midnight .hover\:bg-\[\#F3EFE8\]:hover,
+.theme-midnight .hover\:bg-\[\#EFF5F3\]:hover,
+.theme-midnight .hover\:bg-\[\#DDD4C2\]:hover,
+.theme-midnight .hover\:bg-\[\#DCECE7\]:hover,
+.theme-midnight .hover\:bg-\[\#FFFDF9\]:hover,
+.theme-midnight .hover\:bg-white:hover,
+.theme-midnight .hover\:bg-slate-50:hover,
+.theme-midnight .hover\:bg-slate-100:hover,
+.theme-midnight .hover\:bg-slate-200:hover {
+  background-color: #1C273C !important;
+  color: #F8FAFC !important;
+}
+.theme-midnight tr:hover td *,
+.theme-midnight .hover\:bg-\[\#F7F3EB\]:hover *,
+.theme-midnight .hover\:bg-\[\#F5F0E6\]:hover *,
+.theme-midnight .hover\:bg-\[\#EAE2D3\]:hover *,
+.theme-midnight .hover\:bg-\[\#EFE9DC\]:hover *,
+.theme-midnight .hover\:bg-\[\#F3EFE4\]:hover *,
+.theme-midnight .hover\:bg-\[\#EFF5F3\]:hover *,
+.theme-midnight .hover\:bg-\[\#DDD4C2\]:hover *,
+.theme-midnight .hover\:bg-white:hover *,
+.theme-midnight .hover\:bg-slate-50:hover * {
+  color: #F8FAFC !important;
+}
+
+/* ============================================================================
+   SINGLE-RAIL SLIDER DOCKER & GLOBAL SCROLLBAR ARCHITECTURE (NO DOUBLE SCROLLBAR)
+   ============================================================================ */
+
+/* Left Slider Docker Scroll — Hides Native Browser Scrollbar so ONLY 1 Custom Rail Exists */
+.sidebar-modern-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.sidebar-modern-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Global Sleek Scrollbar for Main & Nested Panes */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(10, 77, 68, 0.25) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(10, 77, 68, 0.24);
+  border-radius: 9999px;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(10, 77, 68, 0.48);
+}
+
+/* ============================================================================
+   SNAPCHAT-STYLE CHAT BUBBLE & SPRING PHYSICS ANIMATIONS
+   ============================================================================ */
+@keyframes snapPopIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) translateX(-6px) scale(0.96);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-1.5px) translateX(1px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+}
+
+@keyframes snapSaveBounce {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.022) translateX(3px);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+.animate-snap-msg {
+  animation: snapPopIn 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-snap-saved {
+  animation: snapSaveBounce 0.24s cubic-bezier(0.34, 1.56, 0.64, 1);
+}

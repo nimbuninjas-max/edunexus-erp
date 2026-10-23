@@ -1,0 +1,6 @@
+{
+  "name": "EduNexus ERP",
+  "description": "Comprehensive multi-portal school ERP system featuring Student, Faculty, and Management workspaces with real-time classroom tracking, academic transcripts, interactive learning arcade, and conduct management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

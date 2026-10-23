@@ -1,0 +1,749 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 11,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "css_transition_used",
+        "severity": "warning",
+        "message": "CSS declaration `transition: all 0.2s` runs on the browser clock and cannot be seeked deterministically across render workers.",
+        "selector": "#role-btn-student",
+        "dataAttributes": {},
+        "sourceFile": "D:\\edunexus-erp\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Keep the class or attribute swap for state; put the visual change on the paused GSAP timeline."
+      },
+      {
+        "code": "css_transition_used",
+        "severity": "warning",
+        "message": "CSS declaration `transition: all 0.2s` runs on the browser clock and cannot be seeked deterministically across render workers.",
+        "selector": "#role-btn-teacher",
+        "dataAttributes": {},
+        "sourceFile": "D:\\edunexus-erp\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Keep the class or attribute swap for state; put the visual change on the paused GSAP timeline."
+      },
+      {
+        "code": "css_transition_used",
+        "severity": "warning",
+        "message": "CSS declaration `transition: all 0.2s` runs on the browser clock and cannot be seeked deterministically across render workers.",
+        "selector": "#role-btn-admin",
+        "dataAttributes": {},
+        "sourceFile": "D:\\edunexus-erp\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Keep the class or attribute swap for state; put the visual change on the paused GSAP timeline."
+      },
+      {
+        "code": "css_transition_used",
+        "severity": "warning",
+        "message": "CSS declaration `transition: background 0.8s` runs on the browser clock and cannot be seeked deterministically across render workers.",
+        "selector": "#s3-liquid",
+        "dataAttributes": {},
+        "sourceFile": "D:\\edunexus-erp\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Keep the class or attribute swap for state; put the visual change on the paused GSAP timeline."
+      },
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 495 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\edunexus-erp\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split coherent scenes or layers into separate .html files under compositions/, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 0 has 5 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\edunexus-erp\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-1\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-1",
+        "dataAttributes": {},
+        "sourceFile": "D:\\edunexus-erp\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-2\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-2",
+        "dataAttributes": {},
+        "sourceFile": "D:\\edunexus-erp\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-3\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-3",
+        "dataAttributes": {},
+        "sourceFile": "D:\\edunexus-erp\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-4\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-4",
+        "dataAttributes": {},
+        "sourceFile": "D:\\edunexus-erp\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-4\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"scene-5\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-5",
+        "dataAttributes": {},
+        "sourceFile": "D:\\edunexus-erp\\brag-output\\composition\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"scene-5\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 2,
+    "warningCount": 2,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 16.667,
+        "selector": "#s4-stamp > span:nth-of-type(1)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1609.52,
+          "top": 592.8,
+          "right": 1668.46,
+          "bottom": 620.25,
+          "width": 58.94,
+          "height": 27.45
+        },
+        "containerSelector": "#s4-voucher-card > div:nth-of-type(3) > div:nth-of-type(3) > strong:nth-of-type(1)",
+        "text": "TREASURY",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1609.52,
+          "y": 592.8,
+          "width": 58.94,
+          "height": 27.45
+        },
+        "firstSeen": 15.875,
+        "lastSeen": 17.875,
+        "occurrences": 18,
+        "heldMs": 2000,
+        "times": [
+          15.875,
+          16,
+          16.125,
+          16.25,
+          16.375,
+          16.5,
+          16.625,
+          16.667,
+          16.75,
+          16.875,
+          17,
+          17.125,
+          17.25,
+          17.375,
+          17.5,
+          17.625,
+          17.75,
+          17.875
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "error",
+        "time": 16.667,
+        "selector": "#s4-stamp > span:nth-of-type(2)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1624.79,
+          "top": 608.56,
+          "right": 1661.19,
+          "bottom": 634.45,
+          "width": 36.4,
+          "height": 25.89
+        },
+        "containerSelector": "#s4-voucher-card > div:nth-of-type(3) > div:nth-of-type(3) > strong:nth-of-type(1)",
+        "text": "PAID",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1624.79,
+          "y": 608.56,
+          "width": 36.4,
+          "height": 25.89
+        },
+        "firstSeen": 15.875,
+        "lastSeen": 17.875,
+        "occurrences": 18,
+        "heldMs": 2000,
+        "times": [
+          15.875,
+          16,
+          16.125,
+          16.25,
+          16.375,
+          16.5,
+          16.625,
+          16.667,
+          16.75,
+          16.875,
+          17,
+          17.125,
+          17.25,
+          17.375,
+          17.5,
+          17.625,
+          17.75,
+          17.875
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "warning",
+        "time": 1.111,
+        "selector": "#glow-1",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": -100,
+          "top": -100,
+          "right": 600,
+          "bottom": 600,
+          "width": 700,
+          "height": 700
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "left": 100,
+          "top": 100
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": -100,
+          "y": -100,
+          "width": 700,
+          "height": 700
+        },
+        "firstSeen": 1.111,
+        "lastSeen": 18.889,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          1.111,
+          3.333,
+          5.556,
+          7.778,
+          10,
+          12.222,
+          14.444,
+          16.667,
+          18.889
+        ]
+      },
+      {
+        "code": "panel_out_of_canvas",
+        "severity": "warning",
+        "time": 1.111,
+        "selector": "#glow-2",
+        "message": "Painted panel extends outside the composition canvas.",
+        "rect": {
+          "left": 1370,
+          "top": 580,
+          "right": 1970,
+          "bottom": 1180,
+          "width": 600,
+          "height": 600
+        },
+        "containerSelector": "#root",
+        "text": "",
+        "fixHint": "Move the panel inward, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1920,
+          "bottom": 1080,
+          "width": 1920,
+          "height": 1080
+        },
+        "overflow": {
+          "right": 50,
+          "bottom": 100
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1370,
+          "y": 580,
+          "width": 600,
+          "height": 600
+        },
+        "firstSeen": 1.111,
+        "lastSeen": 18.889,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          1.111,
+          3.333,
+          5.556,
+          7.778,
+          10,
+          12.222,
+          14.444,
+          16.667,
+          18.889
+        ]
+      },
+      {
+        "code": "content_overlap",
+        "severity": "info",
+        "time": 15.875,
+        "selector": "#s4-stamp > span:nth-of-type(3)",
+        "message": "Two text blocks overlap and may render unreadable.",
+        "rect": {
+          "left": 1592.41,
+          "top": 635.08,
+          "right": 1690.5,
+          "bottom": 663.83,
+          "width": 98.09,
+          "height": 28.75
+        },
+        "containerSelector": "#s4-voucher-card > div:nth-of-type(3) > div:nth-of-type(4) > span:nth-of-type(2)",
+        "text": "OCT 2026",
+        "fixHint": "Give each block its own zone, or put data-layout-allow-overlap on the text or on a container inside the scene. A marker on the scene root does not apply.",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1592.41,
+          "y": 635.08,
+          "width": 98.09,
+          "height": 28.75
+        },
+        "firstSeen": 15.875,
+        "lastSeen": 15.875,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          15.875
+        ]
+      }
+    ],
+    "duration": 20,
+    "samples": [
+      1.111,
+      3.333,
+      5.556,
+      7.778,
+      10,
+      12.222,
+      14.444,
+      16.667,
+      18.889
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 5,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": false,
+    "errorCount": 1,
+    "warningCount": 9,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 3.19:1; WCAG AA requires 4.5:1.",
+        "text": "Student",
+        "fg": "rgb(119,155,146)",
+        "bg": "rgb(10,77,68)",
+        "ratio": 3.19,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(156,182,175)",
+        "large": false,
+        "selector": "#role-btn-student",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 783.296875,
+          "y": 56,
+          "width": 91.265625,
+          "height": 32
+        },
+        "time": 10,
+        "times": [
+          1.111,
+          10
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.05:1; WCAG AA requires 4.5:1.",
+        "text": "Faculty: Dr. K. Raman (Reg #100012)",
+        "fg": "rgb(104,96,82)",
+        "bg": "rgb(197,212,207)",
+        "ratio": 4.05,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(97,89,76)",
+        "large": false,
+        "selector": "div > section:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 231,
+          "y": 474.5,
+          "width": 316.46875,
+          "height": 18
+        },
+        "time": 5.556,
+        "times": [
+          5.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.01:1; WCAG AA requires 4.5:1.",
+        "text": "Live Syllabus Topic Broadcast",
+        "fg": "rgb(138,90,25)",
+        "bg": "rgb(207,215,207)",
+        "ratio": 4.01,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(128,83,23)",
+        "large": false,
+        "selector": "div > section:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > span",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 250,
+          "y": 563.5,
+          "width": 191.40625,
+          "height": 14
+        },
+        "time": 5.556,
+        "times": [
+          5.556
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 3.54:1; WCAG AA requires 4.5:1.",
+        "text": "300 mL —200 mL —100 mL —50 mL —",
+        "fg": "rgb(116,131,127)",
+        "bg": "rgb(24,48,42)",
+        "ratio": 3.54,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(136,149,145)",
+        "large": false,
+        "selector": "div > section:nth-of-type(3) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 721.1875,
+          "y": 494.5,
+          "width": 52.8125,
+          "height": 96.75
+        },
+        "time": 10,
+        "times": [
+          10
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.24:1; WCAG AA requires 4.5:1.",
+        "text": "6 Operational Wings: Teaching, Sanitation, Power G",
+        "fg": "rgb(104,96,82)",
+        "bg": "rgb(205,216,211)",
+        "ratio": 4.24,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(100,92,79)",
+        "large": false,
+        "selector": "div > section:nth-of-type(4) > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > p",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 224.65890502929688,
+          "y": 482.5,
+          "width": 517.828125,
+          "height": 16
+        },
+        "time": 14.444,
+        "times": [
+          14.444
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.31:1; WCAG AA requires 4.5:1.",
+        "text": "#100012 • Teaching Faculty",
+        "fg": "rgb(14,107,94)",
+        "bg": "rgb(207,214,206)",
+        "ratio": 4.31,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(14,103,91)",
+        "large": false,
+        "selector": "div > section:nth-of-type(4) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > span",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 331.5182800292969,
+          "y": 558.5,
+          "width": 202.81253051757812,
+          "height": 17
+        },
+        "time": 14.444,
+        "times": [
+          14.444
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 3.03:1; WCAG AA requires 4.5:1.",
+        "text": "Ref: EN-PR-2026-10-100012 · Bank: HDFC •••• 4012",
+        "fg": "rgb(104,96,82)",
+        "bg": "rgb(175,183,178)",
+        "ratio": 3.03,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(76,70,60)",
+        "large": false,
+        "selector": "div > section:nth-of-type(4) > div > div:nth-of-type(2) > div:nth-of-type(2) > p",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1117.0228271484375,
+          "y": 510.245849609375,
+          "width": 565.9544677734375,
+          "height": 14.5364990234375
+        },
+        "time": 14.444,
+        "times": [
+          14.444
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.3:1; WCAG AA requires 4.5:1.",
+        "text": "₹54,000",
+        "fg": "rgb(74,68,59)",
+        "bg": "rgb(164,176,171)",
+        "ratio": 4.3,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(71,65,57)",
+        "large": false,
+        "selector": "div > section:nth-of-type(4) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > strong",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1630.0552978515625,
+          "y": 557.7317504882812,
+          "width": 52.9219970703125,
+          "height": 16.47467041015625
+        },
+        "time": 14.444,
+        "times": [
+          14.444
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.23:1; WCAG AA requires 4.5:1.",
+        "text": "₹31,400",
+        "fg": "rgb(74,68,59)",
+        "bg": "rgb(161,175,170)",
+        "ratio": 4.23,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(69,64,55)",
+        "large": false,
+        "selector": "div > section:nth-of-type(4) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > strong",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1630.0552978515625,
+          "y": 581.959228515625,
+          "width": 52.9219970703125,
+          "height": 16.4747314453125
+        },
+        "time": 14.444,
+        "times": [
+          14.444
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 3.74:1; WCAG AA requires 4.5:1.",
+        "text": "-₹7,000",
+        "fg": "rgb(139,38,38)",
+        "bg": "rgb(158,173,168)",
+        "ratio": 3.74,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(118,32,32)",
+        "large": false,
+        "selector": "div > section:nth-of-type(4) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > strong",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1630.0552978515625,
+          "y": 606.186767578125,
+          "width": 52.9219970703125,
+          "height": 16.47467041015625
+        },
+        "time": 14.444,
+        "times": [
+          14.444
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      1.111,
+      5.556,
+      10,
+      14.444,
+      18.889
+    ],
+    "checked": 119,
+    "passed": 108
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}
